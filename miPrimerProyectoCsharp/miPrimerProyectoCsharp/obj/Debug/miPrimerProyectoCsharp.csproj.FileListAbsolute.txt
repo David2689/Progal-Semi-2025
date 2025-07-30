@@ -1,0 +1,10 @@
+C:\Users\silvi\DesktopProgal-Semi-2025.git\miPrimerProyectoCsharp\miPrimerProyectoCsharp\bin\Debug\miPrimerProyectoCsharp.exe.config
+C:\Users\silvi\DesktopProgal-Semi-2025.git\miPrimerProyectoCsharp\miPrimerProyectoCsharp\bin\Debug\miPrimerProyectoCsharp.exe
+C:\Users\silvi\DesktopProgal-Semi-2025.git\miPrimerProyectoCsharp\miPrimerProyectoCsharp\bin\Debug\miPrimerProyectoCsharp.pdb
+C:\Users\silvi\DesktopProgal-Semi-2025.git\miPrimerProyectoCsharp\miPrimerProyectoCsharp\obj\Debug\miPrimerProyectoCsharp.csproj.AssemblyReference.cache
+C:\Users\silvi\DesktopProgal-Semi-2025.git\miPrimerProyectoCsharp\miPrimerProyectoCsharp\obj\Debug\miPrimerProyectoCsharp.Form1.resources
+C:\Users\silvi\DesktopProgal-Semi-2025.git\miPrimerProyectoCsharp\miPrimerProyectoCsharp\obj\Debug\miPrimerProyectoCsharp.Properties.Resources.resources
+C:\Users\silvi\DesktopProgal-Semi-2025.git\miPrimerProyectoCsharp\miPrimerProyectoCsharp\obj\Debug\miPrimerProyectoCsharp.csproj.GenerateResource.cache
+C:\Users\silvi\DesktopProgal-Semi-2025.git\miPrimerProyectoCsharp\miPrimerProyectoCsharp\obj\Debug\miPrimerProyectoCsharp.csproj.CoreCompileInputs.cache
+C:\Users\silvi\DesktopProgal-Semi-2025.git\miPrimerProyectoCsharp\miPrimerProyectoCsharp\obj\Debug\miPrimerProyectoCsharp.exe
+C:\Users\silvi\DesktopProgal-Semi-2025.git\miPrimerProyectoCsharp\miPrimerProyectoCsharp\obj\Debug\miPrimerProyectoCsharp.pdb
