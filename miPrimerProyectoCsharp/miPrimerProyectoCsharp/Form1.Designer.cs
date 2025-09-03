@@ -83,6 +83,7 @@
             this.lblImpuestosaactividadeseconomica.Size = new System.Drawing.Size(516, 25);
             this.lblImpuestosaactividadeseconomica.TabIndex = 5;
             this.lblImpuestosaactividadeseconomica.Text = "IMPUESTO A LAS ACTIVIDADES ECONOMICAS";
+            this.lblImpuestosaactividadeseconomica.Click += new System.EventHandler(this.lblImpuestosaactividadeseconomica_Click);
             // 
             // Form1
             // 

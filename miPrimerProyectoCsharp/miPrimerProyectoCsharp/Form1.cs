@@ -68,5 +68,6 @@ namespace miPrimerProyectoCsharp
 
             lblResultado.Text = "Impuesto: " + impuesto.ToString("C2");
         }
+        }
     }
-}
+
