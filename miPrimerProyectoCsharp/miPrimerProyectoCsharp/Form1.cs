@@ -17,57 +17,70 @@ namespace miPrimerProyectoCsharp
         public Form1()
         {
             InitializeComponent();
+            CargarUnidades();
         }
-        private double[][] tablaImpuesto = {
-            new double[] {0.01, 500, 1.5, 0},
-            new double[] {500.01, 1000, 1.5, 3},
-            new double[] {1000.01, 2000, 3, 3},
-            new double[] {2000.01, 3000, 6, 3},
-            new double[] {3000.01, 6000, 9, 2},
-            new double[] {8000.01, 18000, 15, 2},
-            new double[] {18000.01, 30000, 39, 2},
-            new double[] {30000.01, 60000, 63, 1},
-            new double[] {60000.01, 100000, 93, 0.8},
-            new double[] {100000.01,200000, 125, 0.7},
-            new double[] {200000.01,300000, 195, 0.6},
-            new double[] {300000.01,400000, 255, 0.45},
-            new double[] {400000.01,500000, 300, 0.4},
-            new double[] {500000.01,1000000, 340, 0.3},
-            new double[] {1000000.01,99999999, 490, 0.18}
+        private readonly string[] unidades = {
+            "Pie cuadrado",
+            "Vara cuadrada",
+            "Yarda cuadrada",
+            "Metro cuadrado",
+            "Tareas",
+            "Manzana",
+            "Hectárea"
         };
 
-        private double calcularImpuesto(double monto)
+        private readonly double[] factores = {
+            0.092903, // Pie cuadrado
+            0.698737, // Vara cuadrada
+            0.836127, // Yarda cuadrada
+            1,        // Metro cuadrado
+            437.5,    // Tareas
+            6987,     // Manzana
+            10000     // Hectárea
+        };
+        private void CargarUnidades()
         {
-            double impuesto = 0;
-            for (int i = 0; i < tablaImpuesto.Length; i++)
-            {
-                if (monto >= tablaImpuesto[i][0] && monto <= tablaImpuesto[i][1])
-                {
-                    double desde = tablaImpuesto[i][0];
-                    double precioBase = tablaImpuesto[i][2];
-                    double adicional = tablaImpuesto[i][3];
+            cmbOrigen.Items.Clear();
+            cmbDestino.Items.Clear();
+            cmbOrigen.Items.AddRange(unidades);
+            cmbDestino.Items.AddRange(unidades);
 
-                    double excedente = monto - desde;
-                    impuesto = precioBase + (excedente / 1000) * adicional;
-                    break;
-                }
-            }
-            return impuesto;
+            cmbOrigen.DropDownStyle = ComboBoxStyle.DropDownList;
+            cmbDestino.DropDownStyle = ComboBoxStyle.DropDownList;
+
+            cmbOrigen.SelectedIndex = 3;  // Metro cuadrado
+            cmbDestino.SelectedIndex = 0; // Pie cuadrado
+        }
+        private double Convertir(double valor, int origen, int destino)
+        {
+            double valorEnMetros = valor * factores[origen]; // ✅ usa la matriz
+            return valorEnMetros / factores[destino];
         }
 
-        private void btnCalcularImpuestos_Click(object sender, EventArgs e)
+        private void btnConvertir_Click(object sender, EventArgs e)
         {
-            if (!double.TryParse(txtMonto.Text, out double monto))
+            if (!double.TryParse(txtValor.Text, out double valor))
             {
-                MessageBox.Show("Ingrese un monto válido.");
-                txtMonto.Focus();
+                MessageBox.Show("Ingrese un valor numérico válido.");
+                txtValor.Focus();
                 return;
             }
 
-            double impuesto = calcularImpuesto(monto);
+            if (cmbOrigen.SelectedIndex < 0 || cmbDestino.SelectedIndex < 0)
+            {
+                MessageBox.Show("Seleccione las unidades de origen y destino.");
+                return;
+            }
 
-            lblResultado.Text = "Impuesto: " + impuesto.ToString("C2");
-        }
+            int iOrigen = cmbOrigen.SelectedIndex;
+            int iDestino = cmbDestino.SelectedIndex;
+
+            double res = Convertir(valor, iOrigen, iDestino);
+
+            lblResultado.Text = $"{res:N4} {unidades[iDestino]}";
         }
     }
+}
+  
+
 
