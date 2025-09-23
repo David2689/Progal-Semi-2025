@@ -52,3 +52,5 @@ C:\Users\silvi\Documents\Progal-Semi-2025\miPrimerProyectoCsharp\miPrimerProyect
 C:\Users\silvi\Documents\Progal-Semi-2025\miPrimerProyectoCsharp\miPrimerProyectoCsharp\bin\Debug\miPrimerProyectoCsharp.exe.config
 C:\Users\silvi\Documents\Progal-Semi-2025\miPrimerProyectoCsharp\miPrimerProyectoCsharp\bin\Debug\miPrimerProyectoCsharp.exe
 C:\Users\silvi\Documents\Progal-Semi-2025\miPrimerProyectoCsharp\miPrimerProyectoCsharp\bin\Debug\miPrimerProyectoCsharp.pdb
+C:\Users\silvi\Desktop\Progal-Semi-2025\miPrimerProyectoCsharp\miPrimerProyectoCsharp\bin\Debug\db_maestros.mdf
+C:\Users\silvi\Desktop\Progal-Semi-2025\miPrimerProyectoCsharp\miPrimerProyectoCsharp\bin\Debug\db_maestros_log.ldf
