@@ -1,0 +1,2 @@
+wwwroot\img\logo.png.webp
+wwwroot\views\index.html
